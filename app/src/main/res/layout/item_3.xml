@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/test_photo" />
+        <LinearLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/store_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="미용실 이름"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="left|center_vertical"/>
+            <TextView
+                android:id="@+id/store_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="★ 4.8"
+                android:textColor="@color/light_black"
+                android:textSize="10sp"
+                android:gravity="left|center_vertical"/>
+            <TextView
+                android:id="@+id/store_cut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="커트 10,000원"
+                android:textColor="@color/light_black"
+                android:textSize="10sp"
+                android:gravity="left|center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
