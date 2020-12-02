@@ -11,7 +11,7 @@ public class LoginResponse {
     private String user_name;
 
     @SerializedName("user_type")
-    private String user_type;
+    private int user_type;
 
     @SerializedName("status")
     private String login_status;
@@ -22,7 +22,7 @@ public class LoginResponse {
     public String get_name() {
         return user_name;
     }
-    public String get_type() {
+    public int get_type() {
         return user_type;
     }
     public String get_status(){

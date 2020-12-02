@@ -146,7 +146,13 @@ public class SplashActivity extends AppCompatActivity{
                     MyApplication myApp = (MyApplication) getApplication();
                     myApp.gset_id(result.get_id());
                     myApp.gset_name(result.get_name());
-                    myApp.gset_type(result.get_type());
+                    if (result.get_type() == 0){
+                        myApp.gset_type("일반 회원");
+                    } else if (result.get_type() == 1){
+                        myApp.gset_type("프리미엄 회원");
+                    } else{
+                        myApp.gset_type("핵쟁이");
+                    }
                     myApp.gset_status(result.get_status());
                     finish();
                 } else{

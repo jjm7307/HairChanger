@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -11,11 +13,16 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a2020falll_deep_fake.MyApplication;
 import com.example.a2020falll_deep_fake.R;
 import com.example.a2020falll_deep_fake.adapters.RecyclerViewAdapter_4;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.a2020falll_deep_fake.SplashActivity;
+import com.example.a2020falll_deep_fake.MainActivity;
+import com.example.a2020falll_deep_fake.MyApplication;
 
 public class fragment_4 extends Fragment {
     View v;
@@ -35,6 +42,8 @@ public class fragment_4 extends Fragment {
 
     public fragment_4(){}
 
+    private TextView user_name;
+    private TextView user_type;
 
     @Nullable
     @Override
@@ -50,10 +59,16 @@ public class fragment_4 extends Fragment {
         adapter = new RecyclerViewAdapter_4(getContext(),setting);
         recyclerView.setAdapter(adapter);
 
+        user_name = (TextView) v.findViewById(R.id.user_name);
+        user_type = (TextView) v.findViewById(R.id.user_type);
+        update_info();
+
         return v;
     }
 
     public void update_info(){
-
+        MyApplication myApp = (MyApplication) getActivity().getApplication();
+        user_name.setText(myApp.gget_name());
+        user_type.setText(myApp.gget_type());
     }
 }
