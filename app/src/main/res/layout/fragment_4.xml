@@ -43,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="이름"
+            android:id="@+id/user_name"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"

@@ -52,4 +52,8 @@ public class fragment_4 extends Fragment {
 
         return v;
     }
+
+    public void update_info(){
+
+    }
 }
