@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/fragmenta"
         tools:ignore="MissingConstraints">
         <TextView
             android:layout_width="match_parent"
@@ -22,367 +20,48 @@
             android:textStyle="bold"
             android:paddingLeft="10dp"
             android:gravity="left|center_vertical"
-            android:layout_marginBottom = "10dp"/>
-
+            android:layout_marginBottom = "5dp"/>
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="35dp">
+            <ImageButton
                 android:layout_height="match_parent"
-                android:text="남자 헤어"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
+                android:layout_width="40dp"
+                android:background="@color/yellow"/>
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="더보기> "
-                android:textColor="@color/light_black"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:gravity="bottom|right"/>
+                android:layout_gravity="center|right"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="긴 머리"
+                    android:id="@+id/btn_long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <RadioButton
+                    android:text="짧은 머리"
+                    android:id="@+id/btn_short"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </RadioGroup>
+
         </FrameLayout>
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum = "1">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"
-                    android:id="@+id/iv_result"
-                    android:clickable="true"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <FrameLayout
-            android:layout_marginTop = "10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="여자 헤어"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="더보기> "
-                android:textColor="@color/light_black"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:gravity="bottom|right"/>
-        </FrameLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum = "1">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <FrameLayout
-            android:layout_marginTop = "10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="염색"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="더보기> "
-                android:textColor="@color/light_black"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:gravity="bottom|right"/>
-        </FrameLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum = "1">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight="0.25"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity = "center"
-                    android:src="@drawable/test_photo"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="♥200 "
-                    android:textColor="@color/light_black"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_height="400dp"
+            ></androidx.recyclerview.widget.RecyclerView>
 
         <androidx.cardview.widget.CardView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="5dp"
             card:cardBackgroundColor="@color/yellow"
             card:cardCornerRadius="20dp"
@@ -405,7 +84,5 @@
                 />
 
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

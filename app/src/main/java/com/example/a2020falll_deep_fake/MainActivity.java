@@ -1,48 +1,19 @@
 package com.example.a2020falll_deep_fake;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.FileProvider;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.example.a2020falll_deep_fake.fragments.CameraFragment;
+import com.example.a2020falll_deep_fake.fragments.fragment_1;
 import com.google.android.material.tabs.TabLayout;
 
 import com.example.a2020falll_deep_fake.adapters.ViewPagerAdapter;
-import com.example.a2020falll_deep_fake.fragments.fragment_1;
 import com.example.a2020falll_deep_fake.fragments.fragment_2;
 import com.example.a2020falll_deep_fake.fragments.fragment_3;
 import com.example.a2020falll_deep_fake.fragments.fragment_4;
-import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
-
-import java.io.File;
-import java.io.IOError;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
@@ -51,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public fragment_2 fragmentB = new fragment_2();
     public fragment_3 fragmentC = new fragment_3();
     public fragment_4 fragmentD = new fragment_4();
-
-
-
 
     /* --- Geon Code --- */
     private static final int REQUEST_IMAGE_CAPTURE = 672;
@@ -65,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 //    CameraFragment cameraFragment;
     /* --- Geon Code --- */
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intent = new Intent();
-
-
-
 
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
@@ -98,12 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 int pos = tab.getPosition();
                 changeView(pos);
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                 // do nothing
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 // do nothing
@@ -114,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* --- Geon for camera --- */
+    /*
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "Test_" + timeStamp + "_";
@@ -172,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         matrix.postRotate(degree);
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
-
+*/
 
     /* --- Geon for camera --- */
 
@@ -192,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
+/*
     public void onTextViewClicked(View view){
         Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -211,6 +174,5 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-    }
-
+    }*/
 }

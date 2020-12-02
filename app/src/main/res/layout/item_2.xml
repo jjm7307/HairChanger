@@ -10,7 +10,6 @@
     <FrameLayout
         android:layout_width="190dp"
         android:layout_height="190dp"
-        android:background="@color/yellow_bright"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -18,9 +17,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:layout_gravity = "center"
-            android:src="@drawable/test_photo"
-
-            tools:ignore="MissingConstraints" />
+            android:src="@drawable/test_photo"/>
 
         <TextView
             android:id="@+id/photo"
