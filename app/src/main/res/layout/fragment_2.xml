@@ -19,7 +19,8 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:paddingLeft="10dp"
-            android:gravity="left|center_vertical"/>
+            android:gravity="left|center_vertical"
+            android:layout_marginBottom = "10dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"

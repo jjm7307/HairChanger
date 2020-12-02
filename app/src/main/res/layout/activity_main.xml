@@ -32,7 +32,6 @@
             app:tabTextColor="@color/black">
 
         </com.google.android.material.tabs.TabLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
