@@ -3,17 +3,26 @@ package com.example.a2020falll_deep_fake.login;
 import com.google.gson.annotations.SerializedName;
 
 public class JoinResponse {
-    @SerializedName("code")
-    private int code;
 
-    @SerializedName("message")
-    private String message;
+    @SerializedName("status")
+    private String signin_status;
 
-    public int getCode() {
-        return code;
+    /*@SerializedName("message")
+    private String message;*/
+
+    public String get_status(){
+        return signin_status;
+    }
+    public Boolean check_status() {
+        String pass = "OK";
+        if (signin_status.equals(pass)){
+            return true;
+        } else{
+            return false;
+        }
     }
 
-    public String getMessage() {
+    /*public String getMessage() {
         return message;
-    }
+    }*/
 }
