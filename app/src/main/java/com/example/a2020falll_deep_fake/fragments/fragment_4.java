@@ -41,6 +41,7 @@ public class fragment_4 extends Fragment {
 
     private TextView user_name;
     private TextView user_type;
+
     private ImageView premium;
 
     @Nullable
