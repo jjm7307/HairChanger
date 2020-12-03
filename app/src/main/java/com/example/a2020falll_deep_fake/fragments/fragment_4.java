@@ -21,10 +21,6 @@ import com.example.a2020falll_deep_fake.adapters.RecyclerViewAdapter_4;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.a2020falll_deep_fake.SplashActivity;
-import com.example.a2020falll_deep_fake.MainActivity;
-import com.example.a2020falll_deep_fake.MyApplication;
-
 public class fragment_4 extends Fragment {
     View v;
     private RecyclerView recyclerView;
