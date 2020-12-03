@@ -135,28 +135,32 @@ public class SplashActivity extends AppCompatActivity{
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse result = response.body();
-                System.out.println(result.get_status());
-                System.out.println(result.check_status());
-                if (result.check_status()){
-                    String login_status = result.get_name() + "님 어서오고.";
-                    Toast.makeText(SplashActivity.this, login_status, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                    startActivity(intent);
+                if (result != null) {
+                    if (result.check_status()) {
+                        System.out.println(result.get_status());
+                        System.out.println(result.check_status());
+                        String login_status = result.get_name() + "님 어서오고.";
+                        Toast.makeText(SplashActivity.this, login_status, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                        startActivity(intent);
 
-                    MyApplication myApp = (MyApplication) getApplication();
-                    myApp.gset_id(result.get_id());
-                    myApp.gset_name(result.get_name());
-                    if (result.get_type() == 0){
-                        myApp.gset_type("일반 회원");
-                    } else if (result.get_type() == 1){
-                        myApp.gset_type("프리미엄 회원");
-                    } else{
-                        myApp.gset_type("핵쟁이");
+                        MyApplication myApp = (MyApplication) getApplication();
+                        myApp.gset_id(result.get_id());
+                        myApp.gset_name(result.get_name());
+                        if (result.get_type() == 0) {
+                            myApp.gset_type("일반 회원");
+                        } else if (result.get_type() == 1) {
+                            myApp.gset_type("프리미엄 회원");
+                        } else {
+                            myApp.gset_type("핵쟁이");
+                        }
+                        myApp.gset_status(result.get_status());
+                        finish();
+                    } else {
+                        Toast.makeText(SplashActivity.this, "아이디 또는 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
                     }
-                    myApp.gset_status(result.get_status());
-                    finish();
                 } else{
-                    Toast.makeText(SplashActivity.this, "아이디 또는 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SplashActivity.this, "서버가 꺼져있습니다. 관리자에게 문의하세요.", Toast.LENGTH_SHORT).show();
                 }
             }
 

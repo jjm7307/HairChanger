@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -44,6 +45,7 @@ public class fragment_4 extends Fragment {
 
     private TextView user_name;
     private TextView user_type;
+    private ImageView premium;
 
     @Nullable
     @Override
@@ -61,6 +63,7 @@ public class fragment_4 extends Fragment {
 
         user_name = (TextView) v.findViewById(R.id.user_name);
         user_type = (TextView) v.findViewById(R.id.user_type);
+        premium = (ImageView) v.findViewById(R.id.premium);
         update_info();
 
         return v;
@@ -70,5 +73,11 @@ public class fragment_4 extends Fragment {
         MyApplication myApp = (MyApplication) getActivity().getApplication();
         user_name.setText(myApp.gget_name());
         user_type.setText(myApp.gget_type());
+
+        if (myApp.gget_type() == "프리미엄 회원"){
+            premium.setVisibility(View.VISIBLE);
+        } else{
+            premium.setVisibility(View.INVISIBLE);
+        }
     }
 }

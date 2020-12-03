@@ -5,81 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="Missingconstraints">
+    <FrameLayout
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        tools:ignore="Missingconstraints"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_gravity = "center"
+            android:src="@drawable/female_long_0">
+        </ImageView>
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:id="@+id/index"
+            android:id="@+id/bt_heart"
+            android:layout_margin="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right">
+            <ImageView
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="목록"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-            <TextView
+                android:scaleType="fitCenter"
+                android:src="@drawable/heart_empty">
+            </ImageView>
+            <ImageView
+                android:id="@+id/heart"
+                android:visibility="invisible"
+                android:layout_margin="1dp"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="더보기> "
-                android:textColor="@color/light_black"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:gravity="bottom|right"/>
+                android:scaleType="fitCenter"
+                android:src="@drawable/heart">
+            </ImageView>
         </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum = "1">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="0.25"
-                android:padding="5dp"
-                android:scaleType="fitCenter"
-                android:layout_gravity = "center"
-                android:src="@drawable/test_photo">
-            </ImageView>
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="0.25"
-                android:padding="5dp"
-                android:scaleType="fitCenter"
-                android:layout_gravity = "center"
-                android:src="@drawable/test_photo">
-            </ImageView>
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="0.25"
-                android:padding="5dp"
-                android:scaleType="fitCenter"
-                android:layout_gravity = "center"
-                android:src="@drawable/test_photo">
-            </ImageView>
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="0.25"
-                android:padding="5dp"
-                android:scaleType="fitCenter"
-                android:layout_gravity = "center"
-                android:src="@drawable/test_photo">
-            </ImageView>
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

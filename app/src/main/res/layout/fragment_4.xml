@@ -43,6 +43,8 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
+                android:id="@+id/premium"
+                android:visibility="invisible"
                 android:src="@drawable/premium"
             />
         </androidx.cardview.widget.CardView>

@@ -31,14 +31,23 @@
             android:layout_marginBottom = "10dp"
             app:cardBackgroundColor="@color/light_black"
             app:cardCornerRadius="20dp">
-            <TextView
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="지도가 들어갈 예정"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:layout_height="match_parent" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/myLocationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:layout_gravity="bottom|right" />
+
         </androidx.cardview.widget.CardView>
 
         <View

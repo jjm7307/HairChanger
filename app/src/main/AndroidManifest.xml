@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.2020Falll_Deep_Fake"
         android:name=".MyApplication">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
 
         <activity
             android:name=".MainActivity">
@@ -31,18 +39,24 @@
             </intent-filter>
         </activity>
 
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAKEdkN89T-YIE9b8I39-Fft33jgJvB_CA"/>
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
         <provider
             android:authorities="com.example.a2020falll_deep_fake"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
 
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path"/>
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_path"/>
+
         </provider>
     </application>
-
 
 
 </manifest>
