@@ -21,33 +21,45 @@
             android:textStyle="bold"
             android:paddingLeft="10dp"
             android:gravity="left|center_vertical"
-            android:layout_marginBottom = "20dp"/>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardmap"
-            android:layout_gravity="center"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom = "10dp"
-            app:cardBackgroundColor="@color/light_black"
-            app:cardCornerRadius="70dp">
+            android:layout_marginBottom = "10dp"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="70dp">
+
+                <ImageView
+                    android:id="@+id/user_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="157dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:onClick="showSelectProfile"
+                    android:src="@drawable/test_photo" />
+
+                <ImageView
+                    android:id="@+id/premium1"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    android:src="@drawable/premium_1"/>
+            </androidx.cardview.widget.CardView>
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/premium2"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/test_photo"
+                android:visibility="visible"
+                android:src="@drawable/premium_1"
                 />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:scaleType="fitCenter"
-                android:id="@+id/premium"
-                android:visibility="invisible"
-                android:src="@drawable/premium"
-            />
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,17 +69,29 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"/>
-
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="0dp"
-            android:gravity="center_horizontal"
-            android:text="일반 / 프리미엄"
-            android:id="@+id/user_type"
-            android:textColor="@color/light_black"
-            android:textSize="15sp" />
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="👑프리미엄👑"
+                android:id="@+id/user_type_premium"
+                android:textColor="@color/light_black"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="일반회원"
+                android:id="@+id/user_type"
+                android:textColor="@color/light_black"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
+        </FrameLayout>
 
         <View
             android:layout_width="match_parent"

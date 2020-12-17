@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.a2020falll_deep_fake.MyApplication;
 import com.example.a2020falll_deep_fake.R;
 import com.example.a2020falll_deep_fake.adapters.RecyclerViewAdapter_3;
-import com.example.a2020falll_deep_fake.adapters.Store_data;
+import com.example.a2020falll_deep_fake.Class.Store_data;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -44,7 +44,7 @@ public class fragment_3 extends Fragment implements OnMapReadyCallback {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter_3 adapter;
 
-    Store_data store1 = new Store_data("태울 헤어숍", "★ 5.0", "커트 10,000원", 36.373032, 127.360013, "010-9013-5968");
+    Store_data store1 = new Store_data("태울 헤어숍", "★ 4.7", "커트 10,000원", 36.373032, 127.360013, "010-9013-5968");
     Store_data store2 = new Store_data("노천 헤어숍", "★ 4.8", "커트 9,000원", 36.370849, 127.357951, "010-7664-7307");
     Store_data store3 = new Store_data("교수회관 헤어숍", "★ 4.6", "커트 8,000원", 36.3737728,127.3616844, "010-3222-9847");
     Store_data store4 = new Store_data("메디컬 헤어숍", "★ 4.4", "커트 7,000원", 36.3691996,127.3683631, "042-350-1234");
@@ -116,7 +116,7 @@ public class fragment_3 extends Fragment implements OnMapReadyCallback {
         MyApplication myApp = (MyApplication) getActivity().getApplication();
         myApp.gset_map(g_googleMap);
 
-        adapter = new RecyclerViewAdapter_3(getContext(),store_list, g_googleMap);
+        adapter = new RecyclerViewAdapter_3(getContext(),store_list, g_googleMap,getActivity());
         recyclerView.setAdapter(adapter);
 
         MapsInitializer.initialize(this.getActivity());

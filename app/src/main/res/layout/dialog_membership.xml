@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "15dp">
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/premium_logo"></ImageView>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="프리미엄으로 더욱 더 강력해진 기능을 누려보세요"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        />
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="▶ 프로필 사진 주위에 프리미엄 이펙트를 추가해서 더욱 더 강력해진 자신을 느껴보세요"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="▶ 딥페이크로 헤어스타일 체험 시, 셀카를 3장까지 찍어서 더 자연스럽게 합성된 사진을 얻어보세요"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="▶ 딥페이크로 헤어스타일 체험 시 로딩되는 광고 없이 편안하게 즐겨보세요"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="▶ 딥페이크로 헤어스타일 체험 시, 더 많은 연산량을 제공해서 더 자연스러운 결과를 제공해드립니다"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="▶ 미용실 예약 시, 일반 회원보다 우선 순위로 배정되어 원하는 시간에 빠르게 이용해보세요"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="이 모든 혜택이 월 4,900원에 제공됩니다."
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <CheckBox
+            android:id="@+id/check_7day"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:text="프리미엄 혜택을 일주일동안 무료 체험하기"
+            android:textSize="13sp"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:id="@+id/check_7day_2"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            android:text="위의 모든 혜택을 포기하시겠습니까?"
+            android:textSize="13sp"
+            android:textColor="@color/black"/>
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        card:cardBackgroundColor="@color/yellow"
+        card:cardCornerRadius="20dp"
+        card:cardUseCompatPadding="false"
+        card:cardElevation="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/bt_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="프리미엄 회원으로 전환"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -101,7 +101,7 @@ public class SplashActivity extends AppCompatActivity{
     private void attemptLogin() {
         mIdView.setError(null);
         mPasswordView.setError(null);
-
+        mIdLoginButton.setEnabled(false);
         String ID = mIdView.getText().toString();
         String password = mPasswordView.getText().toString();
 
@@ -139,12 +139,14 @@ public class SplashActivity extends AppCompatActivity{
                     if (result.check_status()) {
                         System.out.println(result.get_status());
                         System.out.println(result.check_status());
-                        String login_status = result.get_name() + "님 어서오고.";
+                        String login_status = result.get_name() + "님 환영합니다!";
                         Toast.makeText(SplashActivity.this, login_status, Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                         startActivity(intent);
+                        finish();
 
                         MyApplication myApp = (MyApplication) getApplication();
+                        myApp.add_photo_list();
                         myApp.gset_id(result.get_id());
                         myApp.gset_name(result.get_name());
                         if (result.get_type() == 0) {
@@ -158,15 +160,18 @@ public class SplashActivity extends AppCompatActivity{
                         finish();
                     } else {
                         Toast.makeText(SplashActivity.this, "아이디 또는 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
+                        mIdLoginButton.setEnabled(true);
                     }
                 } else{
                     Toast.makeText(SplashActivity.this, "서버가 꺼져있습니다. 관리자에게 문의하세요.", Toast.LENGTH_SHORT).show();
+                    mIdLoginButton.setEnabled(true);
                 }
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Toast.makeText(SplashActivity.this, "로그인 실패.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SplashActivity.this, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                mIdLoginButton.setEnabled(true);
             }
         });
     }

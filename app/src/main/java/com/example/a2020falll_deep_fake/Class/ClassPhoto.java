@@ -8,13 +8,16 @@ public class ClassPhoto {
     private Boolean like;
     private String name,gender,length;
     private Integer like_num;
+    private String tag1, tag2;
 
-    public ClassPhoto(String gender, String length, Integer num){
+    public ClassPhoto(String gender, String length, Integer num, String tag1, String tag2){
         this.name = "@drawable/"+gender+"_"+length+"_"+String.valueOf(num);
         this.gender = gender;
         this.length = length;
         this.like = false;
-        this.like_num = random.nextInt(100);
+        this.like_num = (10-num)*23 + 27;
+        this.tag1 = tag1;
+        this.tag2 = tag2;
     }
     public String getGender() {
         return this.gender;
@@ -24,6 +27,12 @@ public class ClassPhoto {
     }
     public String getName() {
         return this.name;
+    }
+    public String getTag1() {
+        return this.tag1;
+    }
+    public String getTag2() {
+        return this.tag2;
     }
 
     public Integer getLikeNum(){

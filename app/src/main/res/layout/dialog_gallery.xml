@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "15dp">
+
+    <ImageView
+        android:id="@+id/dialog_photo"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:scaleType="fitCenter"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingTop ="15dp"
+        android:paddingBottom = "10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/dialog_download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_download">
+            </ImageView>
+            <ImageView
+                android:id="@+id/dialog_share"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:onClick="share"
+                android:src="@drawable/icon_share">
+            </ImageView>
+            <ImageView
+                android:id="@+id/dialog_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_delete">
+            </ImageView>
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -6,32 +6,52 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <FrameLayout
+        android:id="@+id/bt_photo"
         android:layout_width="190dp"
         android:layout_height="190dp"
-        android:background="@color/yellow_bright"
+        android:layout_gravity = "center"
         tools:ignore="MissingConstraints">
-
         <ImageView
+            android:id="@+id/photo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:layout_gravity = "center"
-            android:src="@drawable/test_photo"
-
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/photo"
+            android:src="@drawable/female_long_0"/>
+        <ImageView
+            android:id="@+id/loading_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="bottom|center_horizontal"
-            android:text="photo"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:layout_marginBottom="5dp" />
+            android:scaleType="fitCenter"
+            android:layout_gravity = "center"
+            android:src="@drawable/loading_1"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/loading_text"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="얼굴 추출 중"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/loading_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(1/4)"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
     </FrameLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

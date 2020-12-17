@@ -18,8 +18,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/test_photo" />
+            android:scaleType="centerCrop"/>
         <LinearLayout
             android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"

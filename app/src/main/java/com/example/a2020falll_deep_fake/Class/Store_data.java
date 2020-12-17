@@ -1,4 +1,4 @@
-package com.example.a2020falll_deep_fake.adapters;
+package com.example.a2020falll_deep_fake.Class;
 
 import android.widget.TextView;
 

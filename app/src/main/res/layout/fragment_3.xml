@@ -42,11 +42,10 @@
                 android:id="@+id/myLocationButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_margin="8dp"
                 android:clickable="true"
                 app:fabSize="mini"
-                android:layout_gravity="bottom|right" />
+                android:layout_gravity="top|right" />
 
         </androidx.cardview.widget.CardView>
 
